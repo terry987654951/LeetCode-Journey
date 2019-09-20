@@ -250,9 +250,10 @@ class Gifs:
         """
         move the ready-to-move file to the solved folder.
         """
-        file_list = os.listdir(Config.local_pending_path)
-        for i in file_list:
-            cur_file_path = i
+        filename_list = os.listdir(Config.local_pending_path)
+        for i in filename_list:
+            print(i)
+            cur_file_path = Config.local_pending_path + i
             tar_folder_path = Config.local_path + '/solved'
             # path should be within double quotations if it contains blanks
             command = 'mv "' + cur_file_path + '" "' + tar_folder_path + '"'

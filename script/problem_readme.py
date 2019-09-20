@@ -250,19 +250,20 @@ class Gifs:
         """
         move the ready-to-move file to the solved folder.
         """
-        for i in self.new_gifs:
-            cur_file_path = Config.local_pending_path + i.replace('.gif', '.md')
+        file_list = os.listdir(Config.local_pending_path)
+        for i in file_list:
+            cur_file_path = i
             tar_folder_path = Config.local_path + '/solved'
             # path should be within double quotations if it contains blanks
             command = 'mv "' + cur_file_path + '" "' + tar_folder_path + '"'
             os.system(command)
 
 def main():
-    id_ = input("Problem Number (or type 'gif' to insert gif url): ")
-    if id_ == 'gif':
+    id_ = input("Problem Number (or type 'move' to move the file to the solved folder): ")
+    if id_ == 'move':
         gifs = Gifs()
-        gifs.get_list_of_new_gifs()
-        gifs.write_new_gifs_to_files()
+        # gifs.get_list_of_new_gifs()
+        # gifs.write_new_gifs_to_files()
         gifs.move_to_solved()
 
     else:

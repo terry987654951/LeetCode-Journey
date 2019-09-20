@@ -201,7 +201,7 @@ class Markdown:
             f.write('## Python code\n\n')
             f.write('```python\n\n' + '```\n\n')
             # f.write('## Visualization\n\n' + Config.holder_gif + '\n\n')
-            f.write('## Reference\n\n' + github_gif_url + '\n')
+            f.write('## Reference\n\n' + Config.github_gif_url + '\n')
 
 class Gifs:
     """

@@ -212,7 +212,7 @@ class Gifs:
         # store the file name of all processed gifs
         data = Data()
         self.existed_gifs = data.read('gifs')
-        self.all_gifs = os.listdir(Config.local_gifs_path)
+        # self.all_gifs = os.listdir(Config.local_gifs_path)
         self.new_gifs = []
 
     def get_list_of_new_gifs(self):

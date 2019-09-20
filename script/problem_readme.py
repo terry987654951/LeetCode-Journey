@@ -14,7 +14,7 @@ class Config:
     holder_gif = 'pending gif...'
     
     github_leetcode_url = 'https://github.com/terry987654951/LeetCode-Journey'
-    # github_gif_url = 'https://github.com/jshota/leetcode-solutions/blob/master/gifs/'
+    github_gif_url = 'https://github.com/jshota/leetcode-solutions/blob/master/gifs/'
     
     leetcode_url = 'https://leetcode.com/problems/'
     
@@ -200,8 +200,8 @@ class Markdown:
             self.item.write_description(f)
             f.write('## Python code\n\n')
             f.write('```python\n\n' + '```\n\n')
-            f.write('## Visualization\n\n' + Config.holder_gif + '\n\n')
-            f.write('## Reference\n\n' + 'None\n')
+            # f.write('## Visualization\n\n' + Config.holder_gif + '\n\n')
+            f.write('## Reference\n\n' + github_gif_url + '\n')
 
 class Gifs:
     """

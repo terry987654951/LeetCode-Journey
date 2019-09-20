@@ -259,7 +259,7 @@ class Gifs:
             os.system(command)
 
 def main():
-    id_ = input("Problem Number (or type 'move' to move  the file to the solved folder): ")
+    id_ = input("Problem Number (or type 'move' to move the file to the solved folder): ")
     if id_ == 'move':
         gifs = Gifs()
         # gifs.get_list_of_new_gifs()

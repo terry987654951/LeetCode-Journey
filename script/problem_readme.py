@@ -69,7 +69,7 @@ class Problem:
         self.lock = lock
         self.difficulty = difficulty
         self.frequency = 0.
-        self.blog_url = Config.blog_url + '{}/description'.format(self.title.lower().replace(' ', '-').replace('()','').replace('(x)','x'))
+        self.blog_url = Config.blog_url + '{}/description'.format(self.title.lower().replace(' ', '-').replace('()','').replace('(x)','x').replace("'s",'s'))
         
         # solution url
         self.python = ''
